@@ -1,0 +1,22 @@
+package assignment5_q1;
+
+public class CommissionEmployee extends Employee {
+    private double sales;
+    private double commissionRate;
+
+    public CommissionEmployee(String firstName, String lastName, String socialSecurityNumber, double sales, double commissionRate) {
+        super(firstName, lastName, socialSecurityNumber);
+        this.sales = sales;
+        this.commissionRate = commissionRate;
+    }
+
+    @Override
+    public double earnings() {
+        return sales * commissionRate;
+    }
+
+    @Override
+    public String toString() {
+        return "Commission Employee: " + super.toString();
+    }
+}
