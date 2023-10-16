@@ -1,0 +1,23 @@
+package com.sunbeam;
+
+public class Test {
+	
+	public static void printDisplayableBox(Box<? extends Displayable> b) {
+		b.get().show();
+		}
+	
+	public static void printAnyBox(Box<?> b) {
+		System.out.println(b.get().toString());
+		}
+	
+	public static void main(String[] args) {
+//		Person p = new Person();
+//		p.accept();
+		
+		Box<Person> b = new Box<>();
+		b.set(new Person("Chetan",27));
+		b.get().show();
+		
+	}
+
+}

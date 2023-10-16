@@ -1,0 +1,13 @@
+package com.sunbeam;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Manager m = new Manager();
+		m.accept_manager();
+		m.display_manager();
+
+	}
+
+}

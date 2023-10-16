@@ -1,0 +1,56 @@
+package com.sunbeam;
+
+public class Employee {
+  
+	private int id;
+	private float sal;
+	
+public Employee
+	    {
+	        this.id = 0;
+	        this.sal = 0.0;
+	    }
+
+	public Employee(int id, float sal)
+	    {
+	        this.id = id;
+	        this.sal = sal;
+	    }
+
+	public int get_id()
+	    {
+	        return this.id;
+	    }
+
+    public void set_id(int id)
+	    {
+	        this->id = id;
+	    }
+
+    public float get_sal()
+	    {
+	        return this->sal;
+	    }
+
+    public  void set_sal(float sal)
+	    {
+	        this->sal = sal;
+	    }
+
+    public void acceptEmployee()
+	    {
+	        cout << "Enter the Employee ID = ";
+	        cin >> this->id;
+	        cout << "Enter the Employee Salary = ";
+	        cin >> this->sal;
+	    }
+
+    public void displayEmployee()
+	    {
+	        cout << "---------------------" << endl;
+	        cout << "Employee ID : " << this->id << endl;
+	        cout << "Employee Salary : " << this->sal << endl;
+	    }
+	
+
+}

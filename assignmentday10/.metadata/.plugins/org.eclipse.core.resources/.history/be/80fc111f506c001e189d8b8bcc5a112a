@@ -1,0 +1,18 @@
+package com.sunbeam;
+
+public class Test {
+	
+	public static void printDisplayableBox(<? extends Displayeble> b) {
+		b.get().show();
+		}
+	
+	public static void printAnyBox(______ b) {
+		System.out.println(b.get().toString());
+		}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.sunbeam;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Manager m = new Manager();
+		m.accept_manager();
+		m.display_manager();
+		System.out.println("Total Salry of Manger : "+m.calcTotalSalary());
+
+	}
+
+}
