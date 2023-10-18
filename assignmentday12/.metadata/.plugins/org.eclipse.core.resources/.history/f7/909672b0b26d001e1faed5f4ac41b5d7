@@ -1,0 +1,68 @@
+package com.sunbeam;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		List<Book> list = new ArrayList<Book>();
+		int choice;
+		int index;
+		do {
+			System.out.println("-------------------------------------------");
+			System.out.println("1. Add new book in list.");
+			System.out.println("2. Display all books in forward order.");
+			System.out.println("3. Delete book at given index");
+			System.out.println("4. Check if book with given isbn is in list or not");
+			System.out.println("5. Delete all books in list");
+			System.out.println("6. Display number of books in list");
+			System.out.println("7. Sort all books by price in desc order");
+			System.out.println("8. EXIT ");
+			choice = sc.nextInt();
+			System.out.println("-------------------------------------------");
+			
+			switch(choice) {
+			case 1:
+				Book b = new Book();
+				b.acceptData(sc);
+				if(list.contains(b)) {
+					System.out.println("Book Alredy Exists");
+					index = list.indexOf(b);
+					Book bk = list.get(index);
+					bk.setQuantity(bk.getQuantity()+b.getQuantity());
+				}	
+				else {
+					System.out.println("Book is not Present");
+					list.add(b);
+				}
+				break;
+			case 2:
+			    ListIterator<Book> itr = list.listIterator();
+			    	while(itr.hasNext()) {
+			    		Book ele = itr.next();
+			    		System.out.println(ele);
+			    	}
+			    break;	
+			case 3:
+				System.out.println("Enter the isbn of book you want to find = ");
+				String isbn = sc.nextLine();
+				Book key = new Book();
+				key.setIsbn(isbn);
+				if(list.contains(key)) {
+					System.out.println("Book Found");
+				}
+				else {
+					System.out.println("Book is not found");
+				}
+				break;
+			}
+		}while(choice != 8);
+		
+		
+	}
+
+}

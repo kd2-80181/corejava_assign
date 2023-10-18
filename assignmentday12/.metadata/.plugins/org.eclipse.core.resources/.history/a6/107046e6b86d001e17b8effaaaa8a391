@@ -1,0 +1,21 @@
+package com.sunbeam;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class MyList {
+
+	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+		list.add("Hi how are you?");
+		list.add("Hi how are you doing?");
+		list.add("What is this?");
+		list.add("Thank you so much");
+		list.add("Good Morning");
+		
+		System.out.println(Collections.max(list));
+	}
+
+}
